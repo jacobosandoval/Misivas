@@ -10,7 +10,6 @@ var cont=0
 
 function cambia() {
 
-cont = cont % 2;
 
 if (cont==1){
 
@@ -20,7 +19,15 @@ document.getElementById("fotocambia").src="una.png";
 
 else{
 
+if (cont==2){
+
 document.getElementById("fotocambia").src="dos.png";
+
+}
+    else{
+  document.getElementById("fotocambia").src="tres.png";
+  cont = 0;
+    }
 
 }
 
@@ -29,7 +36,7 @@ cont++;
 }
 function inicio() {
 
-setInterval(cambia, 3000);
+setInterval(cambia, 10000);
 
 }
 

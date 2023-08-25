@@ -1,96 +1,12 @@
-<html>
-<head>
-<title>Misivas</title>
-
-<style>
-body, html { height:150%;
-	margin:0;
-	padding:0;
-	width:100%;
-	background-color:silver;
-}
- 
-.recuadro {
-	border:1px solid black;
-	width:49.5%;
-	display:inline-block;
-	height:49.5%;
-	overflow:hidden;
-}
-#uno{
-	background-color:blue;
-	}
-#dos{
-	background-color:green;
-	}
-#tres{
-	background-color:yellow;
-	}
-#cuatro{
-	background-color:red;
-	}
-</style>
-<script>
-
-var cont=0
-
-function cambia() {
-if (cont==1){
- <!–document.getElementById("fotocambia").src="una.png";–>
-<div class='recuadro' id="uno">
-		<iframe width="100%" height="100%" document.getElementById("uno").src="https://www.youtube.com/embed/Sz6f2exI3Ho?autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-	</div>
-	
-	<div class='recuadro' id="dos">
-		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xAieE-QtOeM?autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-	</div>
-}
-
-else{
-
-if (cont==2){
-
-document.getElementById("fotocambia").src="dos.png";
-
-}
-    else{
-  document.getElementById("fotocambia").src="tres.png";
-  cont = 0;
-    }
-
-}
-
-cont++;
-
-}
-function inicio() {
-
-setInterval(cambia, 10000);
-
-}
-
-window.onload=inicio;
-
-var iframe = document.getElementById("uno");
-var refreshInterval = 1000 * 3; // Refresh every 30 seconds
-
-setInterval(function() {
-  iframe.src = iframe.src;
-}, refreshInterval); 
-
-	
-</script>
-
-  </head>
-
-  <body>
-
-  <h1> </h1>
-
-<img id="fotocambia" src="fotos/una.jpg">
-	  <img id="uno" src="fotos/una.jpg">
-	  <img id="dos" src="fotos/una.jpg">
-	  
-  </body>
-
+<html> 
+<head> 
+<title>Refrescar la URL</title> 
+<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=http://www.desarrolloweb.com"> 
+<body> 
+Hora: 
+<script> 
+miFecha = new Date() 
+document.write(miFecha.getHours() + ":" + miFecha.getMinutes() + ":" + miFecha.getSeconds()) 
+</script> 
+</body> 
 </html>
